@@ -20,3 +20,27 @@ if (average > 69) {
 } else {
   print("Third-class honours")
 }
+
+simple.function <- function(x, y){
+  print(x - y + 1)
+}
+
+simple.function(x = 2, y = 10)
+
+
+#purrr is a part of tidyverse
+
+# Create a list of data frames with England's biggest cities and their populations
+data_list <- list(
+  data.frame(City = c("London", "Birmingham", "Manchester"),
+             Population = c(8961989, 1141816, 547627)),
+  data.frame(City = c("Leeds", "Liverpool", "Newcastle"),
+             Population = c(793139, 494814, 148190))
+)
+
+# Define the condition for filtering data frames
+population_threshold <- 500000
+
+filtered_data <- map(data_list, ~ filter(.x, Population >= population_threshold))
+
+filtered_data
