@@ -25,6 +25,7 @@ EMDAT_summary <- EMDAT %>%
   )
 EMDAT_summary
 
-
+rm(new_files)
+rm(working_directory)
 
 
