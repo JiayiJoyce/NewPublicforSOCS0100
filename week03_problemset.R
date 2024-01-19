@@ -111,3 +111,11 @@ df_wide <- df %>%
   )
 # Save the df_wide data frame as a separate R data set
 saveRDS(df_wide, "df_wide.rds")
+
+
+
+write_csv(wrangled_tophits,"3.wrangled_tophits.csv")
+write_csv(wrangled_IFPI_data,"2.wrangled_IFPI_data.csv")
+write_csv(global_IFPI_data,"1.global_IFPI_data.csv")
+
+
